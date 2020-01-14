@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MoveComponent } from './move/move.component';
 
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { MoveComponent } from './move/move.component';
     MoveComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

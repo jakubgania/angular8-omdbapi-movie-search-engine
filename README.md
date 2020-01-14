@@ -34,3 +34,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - wgranie projektu do repozytorium
 - utworzenie komponentu - search
 - utworzenie komponent - move
+- utworzenie i dodanie pliku/modułu app-routing.module.ts z routingiem
