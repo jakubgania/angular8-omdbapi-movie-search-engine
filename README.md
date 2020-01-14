@@ -31,3 +31,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - instalacja angular CLI
 - inicjalizacja projektu
 - utworzenie repozytorium
+- wgranie projektu do repozytorium
+- utworzenie komponentu - search
+- utworzenie komponent - move
