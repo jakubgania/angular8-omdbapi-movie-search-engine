@@ -35,3 +35,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - utworzenie komponentu - search
 - utworzenie komponent - move
 - utworzenie i dodanie pliku/modułu app-routing.module.ts z routingiem
+- uzyskanie klucza do API

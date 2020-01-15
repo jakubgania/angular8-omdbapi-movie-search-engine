@@ -1,1 +1,81 @@
-<p>movie works!</p>
+<div class="movie-main-container">
+  <div class="information-container">
+    <div>
+      <button routerLink="/">
+        Search
+      </button>
+    </div>
+    <div class="top-section">
+      <div class="image-section">
+        <img [src]="movie.Poster" alt="">
+      </div>
+      <div class="information-section">
+        <div>
+          <div class="section-title">
+            {{ movie.Title }}
+          </div>
+          <div style="width: 100%;">
+            <div class="information-subsection">
+              <div class="information-item">
+                Rok : {{ movie.Year }}
+              </div>
+              <div class="information-item">
+                Kraj : {{ movie.country }}
+              </div>
+            </div>
+            <div class="information-subsection">
+              <div class="information-item">
+                Czas : {{ movie.Runtime }}
+              </div>
+              <div class="information-item">
+                Wydanie : {{ movie.Released }}
+              </div>
+            </div>
+            <div class="information-subsection">
+              <div class="information-item">
+                Typ : {{ movie.Type }}
+              </div>
+              <div class="information-item">
+                Gatunek : {{ movie.Genre }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-title">
+            Reżyser
+          </div>
+          <div>
+            img
+          </div>
+          <div>
+            imie i nazwisko
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-title">
+        Obsada
+      </div>
+      <div *ngFor="let item of movie.Actors">
+        {{ item }}
+      </div>
+    </div>
+    <div>
+      <div class="section-title">
+        Oceny
+      </div>
+      <div *ngFor="let item of movie.Ratings">
+        <div class="rating-item">
+          <div class="rating-title">
+            {{ item.Source }}
+          </div>
+          <div>
+            {{ item.Value }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

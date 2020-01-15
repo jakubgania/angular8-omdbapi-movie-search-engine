@@ -5,9 +5,10 @@ import { MovieComponent } from './movie/movie.component';
 
 
 const routes: Routes = [
-//   { path: '', redirectTo: 'search', pathMatch: 'full'},
+  { path: '', redirectTo: 'search', pathMatch: 'full'},
   { path: 'search', component: SearchComponent },
   { path: 'movie/:id', component: MovieComponent },
+
 ];
 
 @NgModule({
