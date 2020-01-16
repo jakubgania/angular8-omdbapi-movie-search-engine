@@ -1,18 +1,21 @@
 <div class="main-container">
   <div class="search-container">
+
+    <div class="top-title">
+      Filmy Seriale Dokumenty
+    </div>
+
     <div class="main-wrapper">
-      wrapper
-      
       <div>
         <form [formGroup]="form" (ngSubmit)="submitForm()" class="search-form">
-          <input type="text" class="search-item" placeholder="Tytuł" formControlName="title">
-          <input type="text" class="search-item" placeholder="Rok" formControlName="year">
-          <select class="search-item" formControlName="type">
+          <input type="text" class="search-item search-input" placeholder="Tytuł" formControlName="title">
+          <input type="text" class="search-item search-input" placeholder="Rok" formControlName="year">
+          <select class="search-item search-select" formControlName="type">
             <option value="movie" selected>Film</option>
             <option value="series">Seria</option>
             <option value="episode">Epizod</option>
           </select>
-          <select class="search-item" formControlName="plot">
+          <select class="search-item search-select" formControlName="plot">
             <option value="short" selected>Short</option>
             <option value="full">Full</option>
           </select>
