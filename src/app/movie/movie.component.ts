@@ -15,14 +15,11 @@ export class MovieComponent implements OnInit {
 
   ngOnInit() {
     this.movieId = this.activatedRoute.snapshot.params.id;
-    console.log(this.movieId);
+
     this.movie = this.movieService.getMovieById(this.movieId).subscribe((data) => {
-      console.log(data);
-      let xd = this.splitArray(data['Actors']);
-      console.log(xd);
-      data['Actors'] = xd;
-      // console.log(data.Actors);
-      // data.Actors.push(xd);
+      let actorsArray:string[] = this.splitArray(data['Actors']);
+  
+      data['Actors'] = actorsArray;
       this.movie = data;
     });
   }

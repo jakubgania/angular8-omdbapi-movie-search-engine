@@ -12,7 +12,7 @@ export class MovieService {
 
   public getMovieById(movieId) {
     console.log('api call');
-    console.log(this.http.get())
-    return this.http.get();
+    console.log(this.http.get(`http://www.omdbapi.com/?apikey=&i=${movieId}`))
+    return this.http.get(`http://www.omdbapi.com/?apikey=&i=${movieId}`);
   }
 }
