@@ -5,21 +5,21 @@
       Filmy Seriale Dokumenty
     </div>
 
-    <div class="main-wrapper">
+    <div class="search-main-wrapper">
       <div>
         <form [formGroup]="form" (ngSubmit)="submitForm()" class="search-form">
-          <input type="text" class="search-item search-input" placeholder="Tytuł" formControlName="title">
-          <input type="text" class="search-item search-input" placeholder="Rok" formControlName="year">
+          <input type="text" class="search-item search-input query left-border-radius" placeholder="Tytuł" formControlName="title">
+          <input type="text" class="search-item search-input year" placeholder="Rok" formControlName="year">
           <select class="search-item search-select" formControlName="type">
-            <option value="movie" selected>Film</option>
+            <option value="movie" [selected]="true">Film</option>
             <option value="series">Seria</option>
             <option value="episode">Epizod</option>
           </select>
           <select class="search-item search-select" formControlName="plot">
-            <option value="short" selected>Short</option>
+            <option value="short" [selected]="true">Short</option>
             <option value="full">Full</option>
           </select>
-          <button class="search-item search-button" type="submit">
+          <button class="search-item search-button right-border-radius" type="submit">
             szukaj
           </button>
         </form>

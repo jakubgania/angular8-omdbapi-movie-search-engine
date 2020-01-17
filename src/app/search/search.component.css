@@ -8,15 +8,20 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 600px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 .top-title {
   font-size: 80px;
   font-weight: 900;
-  padding-top: 68px;
-  padding-bottom: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   color: white;
   text-align: center;
+}
+.search-main-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 .main-wrapper {
   width: 100%;
@@ -30,33 +35,54 @@
   align-items: center;
 }
 .search-input {
-  min-width: 200px;
-  /* height: 54px;
-  font-size: 24px;
+  height: 54px;
+  font-size: 20px;
   font-family: 'Nunito', sans-serif;
-  outline: none;
-  border: none;
-  width: 78%;
-  margin-right: 10px; */
+  padding-left: 16px;
+  padding-right: 10px;
+  color: #808080;
+}
+.query {
+  min-width: 400px;
+}
+.year {
+  min-width: 100px;
 }
 input, select{
   box-sizing: border-box;
 }
 .search-button {
   width: 100%;
-  /* max-width: 120px; */
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+.search-button:hover {
+  background-color: #d9d9d9;
 }
 .search-item {
   height: 54px;
+  outline: none;
+  border: none;
+}
+.left-border-radius {
+  border-top-left-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+.right-border-radius {
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
 }
 .search-select {
-  min-width: 80px;
+  min-width: 100px;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  color: #808080;
 }
 .xdf {
   display: flex;
+  /* background-color: #f1f1f1; */
 }
 .poster-image {
   max-width: 200px;
@@ -66,9 +92,10 @@ input, select{
   height: 280px;
   text-align: center;
   line-height: 280px;
-  background-color: #f1f1f1;
+  background-color: #d9d9d9;
 }
 .movie-list-item {
+  min-height: 280px;
   margin-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
@@ -80,8 +107,8 @@ input, select{
   text-decoration: none;
 }
 .movie-information {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .movie-title {
   font-size: 24px;
