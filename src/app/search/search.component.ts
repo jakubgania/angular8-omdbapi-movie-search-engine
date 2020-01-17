@@ -29,6 +29,11 @@ export class SearchComponent implements OnInit {
     //   type: ['Film'],
     //   plot: ['']
     // })
+
+    this.searchService.initializationMovieList().subscribe((data) => {
+      this.totalResults = data['totalResults'];
+      this.movieList = data['Search'];
+    })
   }
 
   submitForm() {
@@ -37,26 +42,18 @@ export class SearchComponent implements OnInit {
     let url: string = '';
 
     if (this.form.value.title) {
-      console.log(this.form.value.title);
-
       url += '&s=' + this.form.value.title;
     }
 
     if (this.form.value.year) {
-      console.log(this.form.value.year);
-
       url += '&y=' + this.form.value.year;
     }
 
     if (this.form.value.type) {
-      console.log(this.form.value.type);
-
       url += '&type=' + this.form.value.type;
     }
 
     if (this.form.value.plot) {
-      console.log(this.form.value.plot);
-
       url += '&plot=' + this.form.value.plot;
     }
 
