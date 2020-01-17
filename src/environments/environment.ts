@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  example: 'example test value 12345'
+  example: 'example test value 45677'
 };
 
 /*
