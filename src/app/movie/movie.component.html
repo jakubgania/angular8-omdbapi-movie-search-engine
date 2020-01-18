@@ -1,15 +1,15 @@
 <div class="movie-main-container">
   <div class="information-container">
     <div>
-      <button routerLink="/">
-        Search
-      </button>
+      <a routerLink="/">
+        Wyszukiwanie
+      </a>
     </div>
     <div class="top-section">
       <div class="image-section">
         <img [src]="movie.Poster" alt="">
       </div>
-      <div class="information-section">
+      <div class="information-section padding-left">
         <div>
           <div class="section-title">
             {{ movie.Title }}
@@ -58,8 +58,15 @@
       <div class="section-title">
         Obsada
       </div>
-      <div *ngFor="let item of movie.Actors">
-        {{ item }}
+      <div class="tra">
+        <div *ngFor="let item of movie.Actors" class="img-a-section">
+          <div class="actor-image">
+            image
+          </div>
+          <span class="actor-fullname">
+            {{ item }}
+          </span>
+        </div>
       </div>
     </div>
     <div>

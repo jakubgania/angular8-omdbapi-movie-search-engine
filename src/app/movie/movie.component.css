@@ -1,5 +1,5 @@
 .movie-main-container {
-  background-color: black;
+  background-color: #fff;
   height: 100vh;
   color: white;
 }
@@ -11,6 +11,10 @@
 }
 .top-section {
   display: flex;
+  margin-top: 80px;
+}
+.padding-left {
+  padding-left: 12px;
 }
 .image-section {
   width: 30%;
@@ -19,12 +23,14 @@
   width: 70%;
 }
 .section-title {
-  font-size: 30px;
+  font-size: 34px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #333333;
+  background-color: #f1f1f1;
+  color: black;
   width: 100%;
   letter-spacing: 2px;
+  margin-bottom: 14px;
 }
 .rating-item {
   display: flex;
@@ -37,8 +43,30 @@
 .information-subsection {
   display: flex;
   width: 100%;
+  margin-bottom: 12px;
 }
 .information-item {
   width: 50%;
   padding-bottom: 10px;
+}
+.tra {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.img-a-section {
+  margin-right: 12px;
+}
+.actor-image {
+  width: 140px;
+  height: 165px;
+  background-color: aliceblue;
+  color: black;
+  line-height: 165px;
+  text-align: center;
+}
+.actor-fullname {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
