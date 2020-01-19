@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MovieService } from '../services/movie/movie.service'
+import { MovieService } from '../services/movie/movie.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie',
@@ -11,7 +12,11 @@ export class MovieComponent implements OnInit {
   movie;
   movieId;
 
-  constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private movieService: MovieService,
+    private title: Title
+  ) { }
 
   ngOnInit() {
     this.movieId = this.activatedRoute.snapshot.params.id;
@@ -21,6 +26,8 @@ export class MovieComponent implements OnInit {
   
       data['Actors'] = actorsArray;
       this.movie = data;
+
+      this.title.setTitle(this.movie['Title']);
     });
   }
 
