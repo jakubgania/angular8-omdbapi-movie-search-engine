@@ -13,8 +13,6 @@ export class SearchService {
   ) { }
 
   public searchMovies(url) {
-    console.log('search movie');
-
     return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}` + url);
   }
 

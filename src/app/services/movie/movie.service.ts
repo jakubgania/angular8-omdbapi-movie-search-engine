@@ -13,8 +13,6 @@ export class MovieService {
   ) { }
 
   public getMovieById(movieId) {
-    console.log('api call');
-    console.log(this.http.get(`${environment.base_url}/?apikey=${environment.api_key}&i=${movieId}`))
     return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}&i=${movieId}`);
   }
 }

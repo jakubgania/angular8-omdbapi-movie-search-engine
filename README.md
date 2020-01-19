@@ -36,3 +36,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - utworzenie komponent - move
 - utworzenie i dodanie pliku/modułu app-routing.module.ts z routingiem
 - uzyskanie klucza do API
+- implementacja odpowiednich komponentów
+- implementacja mechanizmu infinity scoll w oparciu o komponent - [Angular Infinite Scroll](https://www.npmjs.com/package/ngx-infinite-scroll)
+- refaktoryzacja niektórych części kodu

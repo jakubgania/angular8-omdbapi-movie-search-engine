@@ -30,13 +30,6 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.form = this.fb.group({
-    //   title: [''],
-    //   year: [''],
-    //   type: ['Film'],
-    //   plot: ['']
-    // })
-
     this.title.setTitle('Wyszukiwanie');
     this.queryParameters = this.initializationQueryParameters;
     this.searchService.initializationMovieList(this.initializationQueryParameters).subscribe((data) => {
@@ -48,8 +41,6 @@ export class SearchComponent implements OnInit {
   submitForm() {
     this.paginationCounter = 1;
     this.queryParameters = '';
-
-    console.log(this.form.value)
 
     let url: string = '';
 
@@ -69,33 +60,24 @@ export class SearchComponent implements OnInit {
       url += '&plot=' + this.form.value.plot;
     }
 
-    console.log(url);
-
     this.queryParameters = url;
 
     this.searchService.searchMovies(url).subscribe((data) => {
-      console.log(data);
       this.movieList = data['Search'];
       this.totalResults = data['totalResults'];
     });
   }
 
   onScroll() {
-    console.log('next post');
     this.loadNextData();
   }
 
   loadNextData() {
     let url = this.queryParameters + `&page=${++this.paginationCounter}`;
-    console.log('next post');
-    console.log(url);
-    console.log(this.movieList.length);
-    console.log(this.totalResults);
 
     if (this.movieList.length < this.totalResults) {
       this.searchService.searchMovies(url).subscribe((data) => {
         this.movieList = [...this.movieList, ...data['Search']];
-        console.log(this.movieList);
       });
     }
   }
