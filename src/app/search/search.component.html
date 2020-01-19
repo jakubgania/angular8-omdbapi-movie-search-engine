@@ -28,42 +28,49 @@
   </div>
 
   <div class="main-wrapper">
-    <div class="total-results-container">
-      <div class="total-results">
-        Wszystie filmy - {{ totalResults }}
-      </div>
-    </div>
-    <div *ngFor="let item of movieList" class="movie-list-item">
-      <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
-        <div class="xdf">
-          <div>
-            <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
-              <img [src]="item.Poster" class="poster-image">
-            </ng-template>
-            <ng-template [ngIf]="item.Poster === 'N/A'">
-              <div class="no-poster">
-                Brak zdjęcia
-              </div>
-            </ng-template>
-            <ng-template [ngIf]="!item.Poster">
-              <div class="no-poster">
-                Brak zdjęcia
-              </div>
-            </ng-template>
-          </div>
-          <div class="movie-information">
-            <div class="movie-title">
-              {{ item.Title }}
-            </div>
-            <div>
-              Rok: {{ item.Year }}
-            </div>
-            <div>
-              Typ: {{ item.Type }}
-            </div>
-          </div>
+    <div
+      infiniteScroll
+      [infiniteScrollDistance]="1"
+      [infiniteScrollThrottle]="100"
+      (scrolled)="onScroll()"
+    >
+      <div class="total-results-container">
+        <div class="total-results">
+          Wszystie filmy - {{ totalResults }}
         </div>
-      </a>
+      </div>
+      <div *ngFor="let item of movieList" class="movie-list-item">
+        <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
+          <div class="xdf">
+            <div>
+              <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
+                <img [src]="item.Poster" class="poster-image">
+              </ng-template>
+              <ng-template [ngIf]="item.Poster === 'N/A'">
+                <div class="no-poster">
+                  Brak zdjęcia
+                </div>
+              </ng-template>
+              <ng-template [ngIf]="!item.Poster">
+                <div class="no-poster">
+                  Brak zdjęcia
+                </div>
+              </ng-template>
+            </div>
+            <div class="movie-information">
+              <div class="movie-title">
+                {{ item.Title }}
+              </div>
+              <div>
+                Rok: {{ item.Year }}
+              </div>
+              <div>
+                Typ: {{ item.Type }}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

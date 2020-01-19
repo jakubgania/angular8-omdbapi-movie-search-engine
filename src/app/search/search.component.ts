@@ -12,7 +12,9 @@ export class SearchComponent implements OnInit {
   form: FormGroup;
   movieList;
   totalResults;
-
+  paginationCounter: number = 1;
+  queryParameters: string = '';
+  initializationQueryParameters: string = '&s=story&y=2019&plot=full';
 
   constructor(
     public fb: FormBuilder,
@@ -36,14 +38,17 @@ export class SearchComponent implements OnInit {
     // })
 
     this.title.setTitle('Wyszukiwanie');
-
-    this.searchService.initializationMovieList().subscribe((data) => {
+    this.queryParameters = this.initializationQueryParameters;
+    this.searchService.initializationMovieList(this.initializationQueryParameters).subscribe((data) => {
       this.totalResults = data['totalResults'];
       this.movieList = data['Search'];
     })
   }
 
   submitForm() {
+    this.paginationCounter = 1;
+    this.queryParameters = '';
+
     console.log(this.form.value)
 
     let url: string = '';
@@ -66,6 +71,8 @@ export class SearchComponent implements OnInit {
 
     console.log(url);
 
+    this.queryParameters = url;
+
     this.searchService.searchMovies(url).subscribe((data) => {
       console.log(data);
       this.movieList = data['Search'];
@@ -73,4 +80,23 @@ export class SearchComponent implements OnInit {
     });
   }
 
+  onScroll() {
+    console.log('next post');
+    this.loadNextData();
+  }
+
+  loadNextData() {
+    let url = this.queryParameters + `&page=${++this.paginationCounter}`;
+    console.log('next post');
+    console.log(url);
+    console.log(this.movieList.length);
+    console.log(this.totalResults);
+
+    if (this.movieList.length < this.totalResults) {
+      this.searchService.searchMovies(url).subscribe((data) => {
+        this.movieList = [...this.movieList, ...data['Search']];
+        console.log(this.movieList);
+      });
+    }
+  }
 }

@@ -18,7 +18,7 @@ export class SearchService {
     return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}` + url);
   }
 
-  public initializationMovieList() {
-    return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}&s=story&y=2019&plot=full`);
+  public initializationMovieList(initializationQuery) {
+    return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}` + initializationQuery);
   }
 }
