@@ -51,12 +51,16 @@
         <div class="section-title">
           Reżyser
         </div>
-        <div class="actor-image">
-          image
+        <div class="image-director">
+          <div class="actor-image">
+            image
+          </div>
+          <div class="actor-fullname-section">
+            <span class="actor-fullname">
+              {{ movie.Director }}
+            </span>
+          </div>
         </div>
-        <span class="actor-fullname">
-          {{ movie.Director }}
-        </span>
       </div>
       <div class="section-title">
         Obsada
@@ -66,9 +70,11 @@
           <div class="actor-image">
             image
           </div>
-          <span class="actor-fullname">
-            {{ item }}
-          </span>
+          <div class="actor-fullname-section">
+            <span class="actor-fullname">
+              {{ item }}
+            </span>
+          </div>
         </div>
       </div>
     </div>
