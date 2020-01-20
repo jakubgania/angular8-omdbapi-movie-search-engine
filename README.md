@@ -39,3 +39,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - implementacja odpowiednich komponentów
 - implementacja mechanizmu infinity scoll w oparciu o komponent - [Angular Infinite Scroll](https://www.npmjs.com/package/ngx-infinite-scroll)
 - refaktoryzacja niektórych części kodu
+
+
+
+
+
+
+
+
+- przy wyświetlaniu danych z API sprawdzam czy występuje dany klucz oraz czy klucz nie jest pusty lub czy nie ma wartości 'N/A' ponieważ czasami z API  przychodzą dane albo bez wartości w kluczu albo pusty klucz
