@@ -2,12 +2,12 @@
   <div class="information-container">
     <div>
       <a routerLink="/" class="back-link">
-        Wyszukiwanie
+        <mat-icon class="arrow-icon">keyboard_arrow_left</mat-icon> Wyszukiwanie
       </a>
     </div>
     <div class="top-section">
       <div class="image-section">
-        <img [src]="movie.Poster" alt="">
+        <img [src]="movie.Poster" class="image-poster">
       </div>
       <div class="information-section padding-left">
         <div>
@@ -15,6 +15,9 @@
             {{ movie.Title }}
           </div>
           <div style="width: 100%;">
+            <div class="information-subsection-description">
+              {{ movie.Plot }}
+            </div>
             <div class="information-subsection">
               <div class="information-item">
                 Rok : {{ movie.Year }}
@@ -41,20 +44,20 @@
             </div>
           </div>
         </div>
-        <div>
-          <div class="section-title">
-            Reżyser
-          </div>
-          <div>
-            img
-          </div>
-          <div>
-            imie i nazwisko
-          </div>
-        </div>
       </div>
     </div>
     <div>
+      <div>
+        <div class="section-title">
+          Reżyser
+        </div>
+        <div class="actor-image">
+          image
+        </div>
+        <span class="actor-fullname">
+          {{ movie.Director }}
+        </span>
+      </div>
       <div class="section-title">
         Obsada
       </div>

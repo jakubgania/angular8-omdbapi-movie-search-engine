@@ -1,23 +1,28 @@
 .movie-main-container {
   background-color: #fff;
   height: 100vh;
-  color: white;
+  color: black;
 }
 .information-container {
   width: 100%;
   max-width: 1000px;
-  background-color: red;
+  /* background-color: red; */
   margin: auto;
+  margin-top: 40px;
 }
 .top-section {
   display: flex;
-  margin-top: 80px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 .padding-left {
   padding-left: 12px;
 }
 .image-section {
   width: 30%;
+}
+.image-poster:hover {
+  transform: scale(1.1);
 }
 .information-section {
   width: 70%;
@@ -45,6 +50,10 @@
   width: 100%;
   margin-bottom: 12px;
 }
+.information-subsection-description {
+  width: 100%;
+  margin-bottom: 22px;
+}
 .information-item {
   width: 50%;
   padding-bottom: 10px;
@@ -69,4 +78,17 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+.back-link {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+.back-link:hover {
+  color: #404040;
+}
+.arrow-icon {
+  position: relative;
+  top: 6px;
 }
