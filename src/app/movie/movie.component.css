@@ -16,13 +16,14 @@
   margin-bottom: 40px;
 }
 .padding-left {
-  padding-left: 12px;
+  padding-left: 20px;
 }
 .image-section {
   width: 30%;
 }
 .image-poster:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 .information-section {
   width: 70%;
@@ -91,4 +92,50 @@
 .arrow-icon {
   position: relative;
   top: 6px;
+}
+.image-full-modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.9);
+}
+.image-modal {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+}
+.close-modal-icon {
+  position: absolute;
+  top: 14px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: default;
+}
+.close-modal-icon:hover {
+  color: #cccccc;
+}
+
+.image-modal {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
 }

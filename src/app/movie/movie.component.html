@@ -7,7 +7,7 @@
     </div>
     <div class="top-section">
       <div class="image-section">
-        <img [src]="movie.Poster" class="image-poster">
+        <img [src]="movie.Poster" class="image-poster" (click)="fullImagePoster()">
       </div>
       <div class="information-section padding-left">
         <div>
@@ -88,4 +88,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf="fullDialogImagePoster" class="image-full-modal" (keydown.esc)="fullImagePoster()">
+  <mat-icon class="close-modal-icon" (click)="fullImagePoster()">
+    close
+  </mat-icon>
+  <img [src]="movie.Poster" class="image-modal">
 </div>

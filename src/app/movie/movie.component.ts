@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../services/movie/movie.service';
 import { Title } from '@angular/platform-browser';
@@ -11,6 +11,7 @@ import { Title } from '@angular/platform-browser';
 export class MovieComponent implements OnInit {
   movie;
   movieId;
+  fullDialogImagePoster: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -35,6 +36,18 @@ export class MovieComponent implements OnInit {
     var items:string[];
 
     return inputArray.split(',');
+  }
+
+  fullImagePoster() {
+    this.fullDialogImagePoster = !this.fullDialogImagePoster;
+    console.log(this.fullDialogImagePoster);
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if(event.keyCode == 27){
+      this.fullImagePoster();
+    }
   }
 
 }
