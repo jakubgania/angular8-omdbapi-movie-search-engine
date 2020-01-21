@@ -24,6 +24,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - RWD => głównie pod breakpoint mobilny
 - implementacja BEM w stylach
 - refaktoryzacja
+- dodać loader podczas działania infnite scroll
 
 ## Lista kroków
 
@@ -39,7 +40,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - implementacja mechanizmu infinity scoll w oparciu o komponent - [Angular Infinite Scroll](https://www.npmjs.com/package/ngx-infinite-scroll)
 - refaktoryzacja niektórych części kodu
 - implementacja drugiego widoku wyników wyszukiwania filmów
-- duuuużo drobnych poprawek
+- duuuużo drobnych poprawek technicznych i wizualnych
 - dodanie obłsugi SCSS i konwersja plików z CSS => SCSS
 - implementacja BEM (ale nie całkowicie)
 
