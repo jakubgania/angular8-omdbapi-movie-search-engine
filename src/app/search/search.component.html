@@ -27,17 +27,13 @@
     </div>
   </div>
 
-  <div>
-    <div>
-      <button (click)="view('list')">
-        Lista
-      </button>
-    </div>
-    <div>
-      <button (click)="view('grid')">
-        Kafelki
-      </button>
-    </div>
+  <div class="list-view-buttons-section">
+    <button (click)="view('list')" class="list-view-button" [class.selected]="listView === 'list'">
+      <mat-icon class="list-view-button__icon">list</mat-icon> Lista
+    </button>
+    <button (click)="view('grid')" class="list-view-button" [class.selected]="listView === 'grid'">
+      <mat-icon class="list-view-button__icon">apps</mat-icon> Kafelki
+    </button>
   </div>
 
   <div class="main-wrapper">
