@@ -25,6 +25,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - implementacja BEM w stylach
 - refaktoryzacja
 - dodać loader podczas działania infnite scroll
+- dodać efekt pralaxy dla zdjęcia na stronie wyszukiwania
 
 ## Lista kroków
 
