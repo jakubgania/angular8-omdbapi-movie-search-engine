@@ -14,9 +14,11 @@ export class SearchService {
 
   public searchMovies(url) {
     return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}` + url);
+    // return url;
   }
 
   public initializationMovieList(initializationQuery) {
     return this.http.get(`${environment.base_url}/?apikey=${environment.api_key}` + initializationQuery);
+    // return initializationQuery;
   }
 }

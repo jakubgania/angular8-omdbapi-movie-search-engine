@@ -12,11 +12,13 @@ export class SearchComponent implements OnInit {
   form: FormGroup;
   movieList;
   totalResults;
+  results;
   paginationCounter: number = 1;
   queryParameters: string = '';
   initializationQueryParameters: string = '&s=story&y=2019&plot=full';
   listView: string = 'grid';
   notScrolly: boolean = true;
+  showTotalResultsSection: boolean = true;
 
   constructor(
     public fb: FormBuilder,
@@ -65,8 +67,15 @@ export class SearchComponent implements OnInit {
     this.queryParameters = url;
 
     this.searchService.searchMovies(url).subscribe((data) => {
-      this.movieList = data['Search'];
-      this.totalResults = data['totalResults'];
+      if (data['Response'] === 'False') {
+        this.showTotalResultsSection = false;
+        this.movieList = [];
+      }
+
+      if (data['Response'] === 'True') {
+        this.movieList = data['Search'];
+        this.totalResults = data['totalResults'];
+      }
     });
   }
 

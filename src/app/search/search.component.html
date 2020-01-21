@@ -19,23 +19,23 @@
           <option value="full">Pełnometrażowy</option>
         </select>
         <button class="search-form__input search-form__search-button search-form--right-border-radius" type="submit">
-          szukaj  <mat-icon class="search-form__search-icon">search</mat-icon> 
+          szukaj  <mat-icon class="search-form__search-icon">search</mat-icon>
         </button>
       </form>
     </div>
   </div>
 
   <div class="list-view-buttons-section">
-    <button (click)="view('list')" class="list-view-button" [class.selected]="listView === 'list'">
-      <mat-icon class="list-view-button__icon">list</mat-icon> Lista
-    </button>
     <button (click)="view('grid')" class="list-view-button" [class.selected]="listView === 'grid'">
       <mat-icon class="list-view-button__icon">apps</mat-icon> Kafelki
+    </button>
+    <button (click)="view('list')" class="list-view-button" [class.selected]="listView === 'list'">
+      <mat-icon class="list-view-button__icon">list</mat-icon> Lista
     </button>
   </div>
 
   <div class="main-wrapper">
-    <div *ngIf="listView === 'list'">'
+    <div *ngIf="listView === 'list'">
       <div
         infiniteScroll
         [infiniteScrollDistance]="1"
@@ -43,7 +43,7 @@
         (scrolled)="onScroll()"
       >
         <div>
-          <div class="total-results-container">
+          <div *ngIf="showTotalResultsSection" class="total-results-container">
             <div class="total-results">
               Wszystie filmy - {{ totalResults }}
             </div>
@@ -86,15 +86,15 @@
   </div>
 
   <div *ngIf="listView === 'grid'" class="grid-wrapper">
-    <div class="total-results-container">
+    <div *ngIf="showTotalResultsSection" class="total-results-container">
       <div class="total-results total-results--padding-left">
         Wszystie filmy - {{ totalResults }}
       </div>
     </div>
     <div
       infiniteScroll
-      [infiniteScrollDistance]="1.5"
-      [infiniteScrollThrottle]="300"
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="100"
       (scrolled)="onScroll()"
     >
       <div class="grid-container">
@@ -123,7 +123,6 @@
           </a>
         </div>
       </div>
-    </div
-    >
+    </div>
   </div>
 </div>
