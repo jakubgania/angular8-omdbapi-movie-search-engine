@@ -27,6 +27,19 @@
     </div>
   </div>
 
+  <div>
+    <div>
+      <button (click)="view('list')">
+        Lista
+      </button>
+    </div>
+    <div>
+      <button (click)="view('grid')">
+        Kafelki
+      </button>
+    </div>
+  </div>
+
   <div class="main-wrapper">
     <div
       infiniteScroll
@@ -39,38 +52,67 @@
           Wszystie filmy - {{ totalResults }}
         </div>
       </div>
-      <div *ngFor="let item of movieList" class="movie-list-item">
-        <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
-          <div class="xdf">
-            <div>
-              <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
-                <img [src]="item.Poster" class="poster-image">
-              </ng-template>
-              <ng-template [ngIf]="item.Poster === 'N/A'">
-                <div class="no-poster">
-                  Brak zdjęcia
-                </div>
-              </ng-template>
-              <ng-template [ngIf]="!item.Poster">
-                <div class="no-poster">
-                  Brak zdjęcia
-                </div>
-              </ng-template>
-            </div>
-            <div class="movie-information">
-              <div class="movie-title">
-                {{ item.Title }}
-              </div>
+      <div *ngIf="listView === 'list'">
+        <div *ngFor="let item of movieList" class="movie-list-item">
+          <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
+            <div class="xdf">
               <div>
-                Rok: {{ item.Year }}
+                <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
+                  <img [src]="item.Poster" class="poster-image">
+                </ng-template>
+                <ng-template [ngIf]="item.Poster === 'N/A'">
+                  <div class="no-poster">
+                    Brak zdjęcia
+                  </div>
+                </ng-template>
+                <ng-template [ngIf]="!item.Poster">
+                  <div class="no-poster">
+                    Brak zdjęcia
+                  </div>
+                </ng-template>
               </div>
-              <div>
-                Typ: {{ item.Type }}
+              <div class="movie-information">
+                <div class="movie-title">
+                  {{ item.Title }}
+                </div>
+                <div>
+                  Rok: {{ item.Year }}
+                </div>
+                <div>
+                  Typ: {{ item.Type }}
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div *ngIf="listView === 'grid'" class="grid-container">
+    <div *ngFor="let item of movieList" class="movie-grid-item">
+      <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
+        <div>
+          <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
+            <img [src]="item.Poster" class="grid-poster-image">
+          </ng-template>
+          <ng-template [ngIf]="item.Poster === 'N/A'">
+            <div class="grid-no-poster">
+              Brak zdjęcia
+            </div>
+          </ng-template>
+          <ng-template [ngIf]="!item.Poster">
+            <div class="grid-no-poster">
+              Brak zdjęcia
+            </div>
+          </ng-template>
+        </div>
+        <div>
+          <div class="movie-grid-title">
+            {{ item.Title }}
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>

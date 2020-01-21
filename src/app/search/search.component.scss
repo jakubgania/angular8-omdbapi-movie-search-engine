@@ -1,5 +1,8 @@
+$fontFamily: 'Nunito', sans-serif;
+
 .main-container {
   margin-bottom: 100px;
+  font-family: $fontFamily;
 }
 .search-container {
   background: linear-gradient(to right,rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.09)), url(../../assets/images/bg.jpg);
@@ -15,9 +18,8 @@
   font-weight: 900;
   padding-top: 100px;
   padding-bottom: 100px;
-  color: white;
+  color: #fff;
   text-align: center;
-  font-family: 'Nunito', sans-serif;
 }
 .search-main-wrapper {
   width: 100%;
@@ -29,6 +31,9 @@
   max-width: 800px;
   margin: auto;
 }
+input, select{
+  box-sizing: border-box;
+}
 .search-form {
   width: 100%;
   display: flex;
@@ -38,7 +43,7 @@
   &__input {
     height: 54px;
     font-size: 20px;
-    font-family: 'Nunito', sans-serif;
+    font-family: $fontFamily;
     padding-left: 16px;
     padding-right: 10px;
     color: #808080;
@@ -75,7 +80,6 @@
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Nunito', sans-serif;
 
     &:hover {
       background-color: #d9d9d9;
@@ -88,9 +92,6 @@
     top: 5px;
     left: 10px;
   }
-}
-input, select{
-  box-sizing: border-box;
 }
 .xdf {
   display: flex;
@@ -125,8 +126,47 @@ input, select{
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: black;
+  color: #000;
 }
 .total-results {
   font-size: 20px;
+}
+
+.grid-container {
+  display: grid;
+  max-width: 1000px;
+  margin: auto;
+  grid-template-columns: auto auto auto auto;
+}
+.movie-grid-item {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  min-height: 380px;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+}
+.grid-poster-image {
+  min-width: 250px;
+  // width: 100% !important;
+  max-width: 250px;
+  min-height: 380px;
+  // height: 100% !important;
+  max-height: 380px;
+}
+.grid-no-poster {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 380px;
+  max-height: 380px;
+  text-align: center;
+  line-height: 380px;
+  background-color: #d9d9d9;
+}
+.movie-grid-title {
+  font-weight: 600;
+  color: #000;
 }

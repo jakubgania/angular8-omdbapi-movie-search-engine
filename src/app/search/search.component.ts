@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   paginationCounter: number = 1;
   queryParameters: string = '';
   initializationQueryParameters: string = '&s=story&y=2019&plot=full';
+  listView: string = 'grid';
 
   constructor(
     public fb: FormBuilder,
@@ -80,5 +81,9 @@ export class SearchComponent implements OnInit {
         this.movieList = [...this.movieList, ...data['Search']];
       });
     }
+  }
+
+  view(listType) {
+    this.listView = listType;
   }
 }
