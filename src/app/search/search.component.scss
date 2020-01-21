@@ -25,7 +25,7 @@ $fontSizeMedium: 18px;
 }
 .search-main-wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 .main-wrapper {
@@ -66,6 +66,10 @@ input, select{
 
     &--select {
       min-width: 100px;
+    }
+
+    &--select-plot {
+      min-width: 200px;
     }
   }
 
@@ -143,7 +147,7 @@ input, select{
   }
 }
 .grid-wrapper {
-  max-width: 1000px;
+  max-width: 1040px;
   margin: auto;
 }
 .grid-container {

@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
   queryParameters: string = '';
   initializationQueryParameters: string = '&s=story&y=2019&plot=full';
   listView: string = 'grid';
+  notScrolly: boolean = true;
 
   constructor(
     public fb: FormBuilder,
@@ -70,7 +71,10 @@ export class SearchComponent implements OnInit {
   }
 
   onScroll() {
-    this.loadNextData();
+    if (this.notScrolly) {
+      this.notScrolly = false;
+      this.loadNextData();
+    }
   }
 
   loadNextData() {
@@ -81,6 +85,8 @@ export class SearchComponent implements OnInit {
         this.movieList = [...this.movieList, ...data['Search']];
       });
     }
+
+    this.notScrolly = true;
   }
 
   view(listType) {
