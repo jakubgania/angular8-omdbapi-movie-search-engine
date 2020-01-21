@@ -52,3 +52,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 
 - przy wyświetlaniu danych z API sprawdzam czy występuje dany klucz oraz czy klucz nie jest pusty lub czy nie ma wartości 'N/A' ponieważ czasami z API  przychodzą dane albo bez wartości w kluczu albo pusty klucz
+
+- zdjęcia w widoku listy - albo zostawić do lewej, albo centrować każde horyzontalnie i wertykalnie w sekcji dla zdjęcia ???

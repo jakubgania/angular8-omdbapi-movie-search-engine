@@ -53,7 +53,9 @@
               <div class="xdf">
                 <div>
                   <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
-                    <img [src]="item.Poster" class="poster-image">
+                    <div style="width: 220px;">
+                      <img [src]="item.Poster" class="poster-image">
+                    </div>
                   </ng-template>
                   <ng-template [ngIf]="item.Poster === 'N/A'">
                     <div class="no-poster">

@@ -105,22 +105,27 @@ input, select{
 }
 .xdf {
   display: flex;
+  box-shadow: 0 0 22px -2px #d9d9d9;
+  height: 325px;
 }
 .poster-image {
-  max-width: 200px;
+  max-width: 220px;
+  max-height: 325px;
+  min-height: 325px;
 }
 .no-poster {
-  width: 200px;
-  height: 280px;
+  width: 220px;
+  max-height: 325px;
+  min-height: 325px;
   text-align: center;
-  line-height: 280px;
+  line-height: 325px;
   background-color: #d9d9d9;
 }
 .movie-list-item {
   min-height: 280px;
   margin-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #d9d9d9;
+  // border-bottom: 1px solid #d9d9d9;
 
   &:hover {
     transform: scale(1.05);
@@ -140,6 +145,7 @@ input, select{
 .movie-title {
   font-size: 24px;
   font-weight: 600;
+  margin-top: 20px;
   margin-bottom: 10px;
   color: #000;
 }
