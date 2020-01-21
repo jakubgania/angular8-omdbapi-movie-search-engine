@@ -8,19 +8,19 @@
     <div class="search-main-wrapper">
       <div>
         <form [formGroup]="form" (ngSubmit)="submitForm()" class="search-form">
-          <input type="text" class="search-item search-input query left-border-radius" placeholder="Tytuł" formControlName="title">
-          <input type="text" class="search-item search-input year" placeholder="Rok" formControlName="year">
-          <select class="search-item search-select" formControlName="type">
+          <input type="text" class="search-form__input search-form__input--query search-form--left-border-radius" placeholder="Tytuł" formControlName="title">
+          <input type="text" class="search-form__input search-form__input--year" placeholder="Rok" formControlName="year">
+          <select class="search-form__input search-form__input--select" formControlName="type">
             <option value="movie" [selected]="true">Film</option>
             <option value="series">Seria</option>
             <option value="episode">Epizod</option>
           </select>
-          <select class="search-item search-select" formControlName="plot">
+          <select class="search-form__input search-form__input--select" formControlName="plot">
             <option value="short" [selected]="true">Short</option>
             <option value="full">Full</option>
           </select>
-          <button class="search-item search-button right-border-radius" type="submit">
-            szukaj  <mat-icon class="search-icon">search</mat-icon> 
+          <button class="search-form__input search-form__search-button search-form--right-border-radius" type="submit">
+            szukaj  <mat-icon class="search-form__search-icon">search</mat-icon> 
           </button>
         </form>
       </div>
