@@ -43,12 +43,12 @@
       [infiniteScrollThrottle]="100"
       (scrolled)="onScroll()"
     >
-      <div class="total-results-container">
-        <div class="total-results">
-          Wszystie filmy - {{ totalResults }}
-        </div>
-      </div>
       <div *ngIf="listView === 'list'">
+        <div class="total-results-container">
+          <div class="total-results">
+            Wszystie filmy - {{ totalResults }}
+          </div>
+        </div>
         <div *ngFor="let item of movieList" class="movie-list-item">
           <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
             <div class="xdf">
@@ -85,30 +85,37 @@
     </div>
   </div>
 
-  <div *ngIf="listView === 'grid'" class="grid-container">
-    <div *ngFor="let item of movieList" class="movie-grid-item">
-      <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
-        <div>
-          <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
-            <img [src]="item.Poster" class="grid-poster-image">
-          </ng-template>
-          <ng-template [ngIf]="item.Poster === 'N/A'">
-            <div class="grid-no-poster">
-              Brak zdjęcia
-            </div>
-          </ng-template>
-          <ng-template [ngIf]="!item.Poster">
-            <div class="grid-no-poster">
-              Brak zdjęcia
-            </div>
-          </ng-template>
-        </div>
-        <div>
-          <div class="movie-grid-title">
-            {{ item.Title }}
+  <div *ngIf="listView === 'grid'" class="grid-wrapper">
+    <div class="total-results-container">
+      <div class="total-results total-results--padding-left">
+        Wszystie filmy - {{ totalResults }}
+      </div>
+    </div>
+    <div class="grid-container">
+      <div *ngFor="let item of movieList" class="movie-grid-item">
+        <a [routerLink]="'/movie/' + item.imdbID" class="movie-item-link">
+          <div>
+            <ng-template [ngIf]="item.Poster && item.Poster !== 'N/A'">
+              <img [src]="item.Poster" class="grid-poster-image">
+            </ng-template>
+            <ng-template [ngIf]="item.Poster === 'N/A'">
+              <div class="grid-no-poster">
+                Brak zdjęcia
+              </div>
+            </ng-template>
+            <ng-template [ngIf]="!item.Poster">
+              <div class="grid-no-poster">
+                Brak zdjęcia
+              </div>
+            </ng-template>
           </div>
-        </div>
-      </a>
+          <div>
+            <div class="movie-grid-title">
+              {{ item.Title }}
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
