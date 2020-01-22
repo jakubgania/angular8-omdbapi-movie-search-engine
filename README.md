@@ -1,8 +1,8 @@
 # Angular8OmdbapiMovieSearchEngine
 
-Sklonować projekt z repozytorium - git clone project_url project_folder_name
-Przed uruchomieniem projektu dodać plik environment.ts na wzór pliku environment.example.ts i podstawić właściwe dane.
-Wydać polecenie - ng serve następnie otworzyć przegląderkę i następujący adres - http://localhost:4200/
+- Sklonować projekt z repozytorium - git clone project_url project_folder_name
+- Przed uruchomieniem projektu dodać plik environment.ts na wzór pliku environment.example.ts i podstawić właściwe dane.
+- Wydać polecenie - ng serve następnie otworzyć przegląderkę i następujący adres - http://localhost:4200/
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
