@@ -85,6 +85,7 @@ input, select{
 
   &__search-button {
     width: 100%;
+    line-height: 54px;
     font-size: $fontSizeMedium;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -208,6 +209,7 @@ input, select{
   margin-right: 10px;
   border-radius: $borderRadiusValue;
   height: 54px;
+  line-height: 54px;
   font-size: $fontSizeMedium;
   font-family: $fontFamily;
   color: #808080;
