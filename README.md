@@ -8,6 +8,12 @@
 - Wydać polecenie - ng serve następnie otworzyć przegląderkę i następujący adres - http://localhost:4200/
 
 
+## Wersja online
+
+#### wersja ta nie jest aktualna z repozytorium / problem z działaniem przez brak SSL / lepiej uruchomić projekt lokalnie
+[http://sandbox.jakubgania.io/search](http://sandbox.jakubgania.io/search)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
 ## Development server
