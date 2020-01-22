@@ -82,13 +82,58 @@
       <div class="section-title">
         Oceny
       </div>
-      <div *ngFor="let item of movie.Ratings">
+      <div class="ratings-row">
         <div class="rating-item">
-          <div class="rating-title">
-            {{ item.Source }}
+          <div class="side">
+            {{ movie.Ratings[0].Source }}
           </div>
-          <div>
-            {{ item.Value }}
+          <div class="star-middle">
+            <div class="star-container">
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+              <mat-icon class="arrow-icon">star</mat-icon>
+            </div>
+          </div>
+          <div class="side-r right">
+            <div>
+              {{ movie.Ratings[0].Value }}
+            </div>
+          </div>
+        </div>
+        <div class="rating-item">
+          <div class="side">
+            {{ movie.Ratings[1].Source }}
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side-r right">
+            <div>
+              {{ movie.Ratings[1].Value }}
+            </div>
+          </div>
+        </div>
+        <div class="rating-item">
+          <div class="side">
+            {{ movie.Ratings[2].Source }}
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side-r right">
+            <div>
+              {{ movie.Ratings[2].Value }}
+            </div>
           </div>
         </div>
       </div>

@@ -26,6 +26,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - refaktoryzacja
 - dodać loader podczas działania infnite scroll
 - dodać efekt pralaxy dla zdjęcia na stronie wyszukiwania
+- dodać przeliczanie ocen na reprezentację wizualną na wykresach
 
 ## Lista kroków
 

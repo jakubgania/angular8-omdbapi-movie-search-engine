@@ -8,6 +8,7 @@
   max-width: 1000px;
   margin: auto;
   margin-top: 40px;
+  margin-bottom: 80px;
 }
 .top-section {
   display: flex;
@@ -78,17 +79,18 @@
   }
 }
 .actor-image {
-  width: 140px;
-  height: 165px;
+  width: 160px;
+  height: 180px;
   background-color: aliceblue;
   color: black;
-  line-height: 165px;
+  line-height: 180px;
   text-align: center;
   font-size: 10px;
 }
 .actor-fullname-section {
-  width: 140px;
+  width: 160px;
   text-align: center;
+  padding-top: 10px;
 }
 .actor-fullname {
   font-size: 12px;
@@ -154,4 +156,50 @@
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
+}
+
+.ratings-row {
+  display: block;
+  width: 100%;
+}
+.rating-item {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 100%;
+  max-width: 220px;
+}
+.star-middle {
+  float: left;
+  max-width: 220px;
+}
+.side {
+  width: 240px;
+}
+.side-r {
+  width: 100px;
+}
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+.star-container {
+  width: 220px;
+  text-align: center;
+  // color: white;
+}
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #fcba03;
+}
+.right {
+  text-align: right;
 }
