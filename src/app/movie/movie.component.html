@@ -92,7 +92,7 @@
       </div>
       <div class="ratings-row">
         <div class="ratings-row__item">
-          <div class="side">
+          <div class="ratings-row__side">
             {{ movie.Ratings[0].Source }}
           </div>
           <div class="ratings-row__star-middle">
@@ -100,16 +100,17 @@
               <mat-icon *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" class="arrow-icon">
                 star
               </mat-icon>
+              <div class="x"></div>
             </div>
           </div>
-          <div class="side-r right">
+          <div class="ratings-row__side-right ratings-row--right">
             <div>
               {{ movie.Ratings[0].Value }}
             </div>
           </div>
         </div>
         <div class="ratings-row__item">
-          <div class="side">
+          <div class="ratings-row__side">
             {{ movie.Ratings[1].Source }}
           </div>
           <div class="ratings-row__middle">
@@ -117,14 +118,14 @@
               <div class="ratings-row__bar-container--bar"></div>
             </div>
           </div>
-          <div class="side-r right">
+          <div class="ratings-row__side-right ratings-row--right">
             <div>
               {{ movie.Ratings[1].Value }}
             </div>
           </div>
         </div>
         <div class="ratings-row__item">
-          <div class="side">
+          <div class="ratings-row__side">
             {{ movie.Ratings[2].Source }}
           </div>
           <div class="ratings-row__middle">
@@ -132,7 +133,7 @@
               <div class="ratings-row__bar-container--bar"></div>
             </div>
           </div>
-          <div class="side-r right">
+          <div class="ratings-row__side-right ratings-row--right">
             <div>
               {{ movie.Ratings[2].Value }}
             </div>

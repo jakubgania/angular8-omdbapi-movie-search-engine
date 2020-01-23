@@ -208,13 +208,25 @@ $actorImageHeight: 180px;
     float: left;
     max-width: $containerLength;
   }
+
+  &--right {
+    text-align: right;
+  }
+
+  &__side {
+    width: $containerLength;
+  }
+
+  &__side-right {
+    width: 100px;
+  }
 }
-.side {
-  width: 240px;
-}
-.side-r {
-  width: 100px;
-}
-.right {
-  text-align: right;
+.x {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: -34px;
+  height: 26px;
+  float: right;
 }
