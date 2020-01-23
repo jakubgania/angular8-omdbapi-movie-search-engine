@@ -91,21 +91,15 @@
         Oceny
       </div>
       <div class="ratings-row">
-        <div class="rating-item">
+        <div class="ratings-row__item">
           <div class="side">
             {{ movie.Ratings[0].Source }}
           </div>
-          <div class="star-middle">
-            <div class="star-container">
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
-              <mat-icon class="arrow-icon">star</mat-icon>
+          <div class="ratings-row__star-middle">
+            <div class="ratings-row__star-container">
+              <mat-icon *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" class="arrow-icon">
+                star
+              </mat-icon>
             </div>
           </div>
           <div class="side-r right">
@@ -114,13 +108,13 @@
             </div>
           </div>
         </div>
-        <div class="rating-item">
+        <div class="ratings-row__item">
           <div class="side">
             {{ movie.Ratings[1].Source }}
           </div>
-          <div class="middle">
-            <div class="bar-container">
-              <div class="bar-1"></div>
+          <div class="ratings-row__middle">
+            <div class="ratings-row__bar-container">
+              <div class="ratings-row__bar-container--bar"></div>
             </div>
           </div>
           <div class="side-r right">
@@ -129,13 +123,13 @@
             </div>
           </div>
         </div>
-        <div class="rating-item">
+        <div class="ratings-row__item">
           <div class="side">
             {{ movie.Ratings[2].Source }}
           </div>
-          <div class="middle">
-            <div class="bar-container">
-              <div class="bar-1"></div>
+          <div class="ratings-row__middle">
+            <div class="ratings-row__bar-container">
+              <div class="ratings-row__bar-container--bar"></div>
             </div>
           </div>
           <div class="side-r right">
