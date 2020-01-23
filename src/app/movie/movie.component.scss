@@ -119,10 +119,10 @@ $actorImageHeight: 180px;
   position: relative;
   top: 6px;
 }
-.image-full-modal {
+.modal-fullsize {
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 60px;
   left: 0;
   top: 0;
   width: 100%;
@@ -130,30 +130,30 @@ $actorImageHeight: 180px;
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
-}
-.image-modal {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 600px;
-}
-.close-modal-icon {
-  position: absolute;
-  top: 14px;
-  right: 40px;
-  font-size: 40px;
-  color: #fff;
-  cursor: default;
 
-  &:hover {
-    color: #cccccc;
+  &__image {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
   }
-}
-.image-modal {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+
+  &__close-icon {
+    position: absolute;
+    top: 14px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: default;
+
+    &:hover {
+      color: #cccccc;
+    }
+  }
 }
 
 @-webkit-keyframes zoom {

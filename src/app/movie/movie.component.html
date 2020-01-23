@@ -149,9 +149,9 @@
   </div>
 </div>
 
-<div *ngIf="fullDialogImagePoster" class="image-full-modal" (keydown.esc)="fullImagePoster()">
-  <mat-icon class="close-modal-icon" (click)="fullImagePoster()">
+<div *ngIf="fullDialogImagePoster" class="modal-fullsize" (keydown.esc)="fullImagePoster()">
+  <mat-icon class="modal-fullsize__close-icon" (click)="fullImagePoster()">
     close
   </mat-icon>
-  <img [src]="movie.Poster" class="image-modal">
+  <img [src]="movie.Poster" class="modal-fullsize__image">
 </div>
