@@ -32,7 +32,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Todo
+## To Do
 
 - obsługa błęgów - http
 - RWD => głównie pod breakpoint mobilny
@@ -41,6 +41,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - dodać loader podczas działania infnite scroll
 - dodać efekt pralaxy dla zdjęcia na stronie wyszukiwania
 - dodać przeliczanie ocen na reprezentację wizualną na wykresach
+- podział na mniejsze komponenty
 
 ## Lista kroków
 
