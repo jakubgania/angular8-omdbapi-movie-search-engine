@@ -40,7 +40,6 @@ export class MovieComponent implements OnInit {
 
   fullImagePoster() {
     this.fullDialogImagePoster = !this.fullDialogImagePoster;
-    console.log(this.fullDialogImagePoster);
   }
 
   @HostListener('window:keyup', ['$event'])
