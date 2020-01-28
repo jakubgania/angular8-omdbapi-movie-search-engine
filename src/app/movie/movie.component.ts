@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../services/movie/movie.service';
 import { Title } from '@angular/platform-browser';
@@ -8,9 +8,9 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.scss']
 })
-export class MovieComponent implements OnInit {
+export class MovieComponent implements OnInit, OnDestroy {
   movie;
-  movieId;
+  movieId: string = '';
   fullDialogImagePoster: boolean = false;
 
   constructor(
@@ -30,6 +30,10 @@ export class MovieComponent implements OnInit {
 
       this.title.setTitle(this.movie['Title']);
     });
+  }
+
+  ngOnDestroy() {
+    // this.movie.unsubscribe();
   }
 
   private splitArray(inputArray) {
