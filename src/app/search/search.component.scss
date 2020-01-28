@@ -2,6 +2,16 @@ $fontFamily: 'Nunito', sans-serif;
 $borderRadiusValue: 28px;
 $fontSizeMedium: 18px;
 
+@mixin left-border-radius {
+  border-top-left-radius: $borderRadiusValue;
+  border-bottom-left-radius: $borderRadiusValue;
+}
+
+@mixin right-border-radius {
+  border-top-right-radius: $borderRadiusValue;
+  border-bottom-right-radius: $borderRadiusValue;
+}
+
 .main-container {
   margin-bottom: 100px;
   font-family: $fontFamily;
@@ -80,13 +90,11 @@ input, select{
   }
 
   &--left-border-radius {
-    border-top-left-radius: $borderRadiusValue;
-    border-bottom-left-radius: $borderRadiusValue;
+    @include left-border-radius;
   }
 
   &--right-border-radius {
-    border-top-right-radius: $borderRadiusValue;
-    border-bottom-right-radius: $borderRadiusValue;
+    @include right-border-radius;
   }
 
   &__search-button {
@@ -200,6 +208,7 @@ input, select{
 .movie-grid-title {
   font-weight: 600;
   color: #000;
+  max-width: 250px;
 }
 .list-view-buttons-section {
   display: flex;
@@ -240,8 +249,8 @@ input, select{
 @media only screen and (max-width: 1140px) {
   .top-title {
     font-size: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .search-main-wrapper {
     width: initial;
@@ -255,24 +264,22 @@ input, select{
       width: 100%;
     }
 
-    // &__search-button {
-    //   border-top-left-radius: $borderRadiusValue;
-    //   border-bottom-left-radius: $borderRadiusValue;
-    // }
-
     &__input {
       margin-bottom: 8px;
-      border-top-left-radius: $borderRadiusValue;
-      border-bottom-left-radius: $borderRadiusValue;
+      
+      @include left-border-radius;
+      @include right-border-radius;
 
       &--year {
         min-width: initial;
         width: 50%;
+        margin-right: 4px;
       }
 
       &--select {
         min-width: initial;
         width: 50%;
+        margin-left: 4px;
       }
     }
   }
@@ -281,5 +288,30 @@ input, select{
   }
   .grid-container {
     grid-template-columns: auto auto auto;
+  }
+}
+@media only screen and (max-width: 792px) {
+  .top-title {
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .grid-wrapper {
+    max-width: 540px;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 536px) {
+  .total-results {
+    text-align: center;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+  }
+  .movie-grid-item {
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
