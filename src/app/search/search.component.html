@@ -8,12 +8,14 @@
     <div class="search-main-wrapper">
       <form [formGroup]="form" (ngSubmit)="submitForm()" class="search-form">
         <input type="text" class="search-form__input search-form__input--query search-form--left-border-radius" placeholder="Tytuł" formControlName="title">
-        <input type="text" class="search-form__input search-form__input--year" placeholder="Rok" formControlName="year">
-        <select class="search-form__input search-form__input--select" formControlName="type">
-          <option value="movie" [selected]="true">Film</option>
-          <option value="series">Seria</option>
-          <option value="episode">Epizod</option>
-        </select>
+        <div class="search-form__display">
+          <input type="text" class="search-form__input search-form__input--year" placeholder="Rok" formControlName="year">
+          <select class="search-form__input search-form__input--select" formControlName="type">
+            <option value="movie" [selected]="true">Film</option>
+            <option value="series">Seria</option>
+            <option value="episode">Epizod</option>
+          </select>
+        </div>
         <select class="search-form__input search-form__input--select-plot" formControlName="plot">
           <option value="short" [selected]="true">Krótkometrażowy</option>
           <option value="full">Pełnometrażowy</option>

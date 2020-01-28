@@ -27,6 +27,8 @@ $fontSizeMedium: 18px;
   width: 100%;
   max-width: 1100px;
   margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .main-wrapper {
   width: 100%;
@@ -71,6 +73,10 @@ input, select{
     &--select-plot {
       min-width: 200px;
     }
+  }
+
+  &__display {
+    display: contents;
   }
 
   &--left-border-radius {
@@ -229,4 +235,51 @@ input, select{
 }
 .selected {
   background-color: #d9d9d9;
+}
+
+@media only screen and (max-width: 1140px) {
+  .top-title {
+    font-size: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .search-main-wrapper {
+    width: initial;
+    max-width: 780px;
+  }
+  .search-form {
+    display: grid;
+
+    &__display {
+      display: flex;
+      width: 100%;
+    }
+
+    // &__search-button {
+    //   border-top-left-radius: $borderRadiusValue;
+    //   border-bottom-left-radius: $borderRadiusValue;
+    // }
+
+    &__input {
+      margin-bottom: 8px;
+      border-top-left-radius: $borderRadiusValue;
+      border-bottom-left-radius: $borderRadiusValue;
+
+      &--year {
+        min-width: initial;
+        width: 50%;
+      }
+
+      &--select {
+        min-width: initial;
+        width: 50%;
+      }
+    }
+  }
+  .grid-wrapper {
+    max-width: 780px;
+  }
+  .grid-container {
+    grid-template-columns: auto auto auto;
+  }
 }
