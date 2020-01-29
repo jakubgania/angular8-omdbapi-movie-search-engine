@@ -13,6 +13,19 @@
 #### wersja ta nie jest aktualna z repozytorium / problem z działaniem przez brak SSL / lepiej uruchomić projekt lokalnie
 [http://sandbox.jakubgania.io/search](http://sandbox.jakubgania.io/search)
 
+![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-1.PNG)
+
+=====================================================
+
+![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-2.PNG)
+
+=====================================================
+
+![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-3.PNG)
+
+=====================================================
+
+![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-4.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
