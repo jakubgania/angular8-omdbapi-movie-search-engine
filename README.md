@@ -73,6 +73,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - duuuużo drobnych poprawek technicznych i wizualnych
 - dodanie obłsugi SCSS i konwersja plików z CSS => SCSS
 - implementacja BEM (ale nie całkowicie)
+- dodanie RWD dla strony wyszukiwania
+- refaktoryzacja kodu js, html i css
 
 
 
