@@ -7,12 +7,6 @@
 - Przed uruchomieniem projektu dodać plik environment.ts na wzór pliku environment.example.ts i podstawić właściwe dane.
 - Wydać polecenie - ng serve następnie otworzyć przegląderkę i następujący adres - http://localhost:4200/
 
-
-## Wersja online
-
-#### wersja ta nie jest aktualna z repozytorium / problem z działaniem przez brak SSL / lepiej uruchomić projekt lokalnie
-[http://sandbox.jakubgania.io/search](http://sandbox.jakubgania.io/search)
-
 ![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-1.PNG)
 
 =====================================================
