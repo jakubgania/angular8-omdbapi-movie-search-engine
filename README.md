@@ -39,10 +39,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## To Do
+## To do
 
 - obsługa błęgów - http
-- RWD => głównie pod breakpoint mobilny
+- RWD => głównie pod breakpoint mobilny dla strony ze szczegółami filmu
 - implementacja BEM w stylach
 - refaktoryzacja
 - dodać loader podczas działania infnite scroll
