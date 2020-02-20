@@ -1,6 +1,6 @@
 # Angular8OmdbapiMovieSearchEngine
 
-Podgląd projektu - [jakubgania.github.io/angular8-omdbapi-movie-search-engine/search](https://jakubgania.github.io/angular8-omdbapi-movie-search-engine/search)
+Podgląd projektu - [jakubgania.github.io/angular8-omdbapi-movie-search-engine](https://jakubgania.github.io/angular8-omdbapi-movie-search-engine)
 
 ## Uruchomienie projektu
 
