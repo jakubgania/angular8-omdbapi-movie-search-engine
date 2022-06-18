@@ -1,12 +1,12 @@
 # Angular8OmdbapiMovieSearchEngine
 
-Podgląd projektu - [jakubgania.github.io/angular8-omdbapi-movie-search-engine](https://jakubgania.github.io/angular8-omdbapi-movie-search-engine)
+Project preview - [jakubgania.github.io/angular8-omdbapi-movie-search-engine](https://jakubgania.github.io/angular8-omdbapi-movie-search-engine)
 
-## Uruchomienie projektu
+## Project launch
 
-- Sklonować projekt z repozytorium - git clone project_url project_folder_name
-- Przed uruchomieniem projektu dodać plik environment.ts na wzór pliku environment.example.ts i podstawić właściwe dane.
-- Wydać polecenie - ng serve następnie otworzyć przegląderkę i następujący adres - http://localhost:4200/
+- Clone a project from the repository - git clone project_url project_folder_name
+- Before starting the project, add the file environment.ts na wzór pliku environment.example.ts and provide the correct data.
+- Give the command - ng serve then open the browser and the following address - http://localhost:4200/
 
 ![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-1.PNG)
 
