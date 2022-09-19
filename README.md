@@ -40,34 +40,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## To do
-
-- obsługa błęgów - http
-- RWD => głównie pod breakpoint mobilny dla strony ze szczegółami filmu
-- implementacja BEM w stylach
-- refaktoryzacja
-- dodać loader podczas działania infnite scroll
-- dodać efekt pralaxy dla zdjęcia na stronie wyszukiwania
-- dodać przeliczanie ocen na reprezentację wizualną na wykresach
-- podział na mniejsze komponenty
-
-## Lista kroków
-
-- instalacja angular CLI
-- inicjalizacja projektu
-- utworzenie repozytorium
-- wgranie projektu do repozytorium
-- utworzenie komponentu - search
-- utworzenie komponent - move
-- utworzenie i dodanie pliku/modułu app-routing.module.ts z routingiem
-- uzyskanie klucza do API
-- implementacja odpowiednich komponentów
-- implementacja mechanizmu infinity scoll w oparciu o komponent - [Angular Infinite Scroll](https://www.npmjs.com/package/ngx-infinite-scroll)
-- refaktoryzacja niektórych części kodu
-- implementacja drugiego widoku wyników wyszukiwania filmów
-- duuuużo drobnych poprawek technicznych i wizualnych
-- dodanie obłsugi SCSS i konwersja plików z CSS => SCSS
-- implementacja BEM (ale nie całkowicie)
-- dodanie RWD dla strony wyszukiwania
-- refaktoryzacja kodu js, html i css
 
