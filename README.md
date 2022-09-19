@@ -8,6 +8,8 @@ Project preview - [jakubgania.github.io/angular8-omdbapi-movie-search-engine](ht
 - Before starting the project, add the file environment.ts na wzór pliku environment.example.ts and provide the correct data.
 - Give the command - ng serve then open the browser and the following address - http://localhost:4200/
 
+## A few screenshots
+
 ![](https://github.com/jakubgania/angular8-omdbapi-movie-search-engine/blob/master/screenshots/screen-1.PNG)
 
 =====================================================
